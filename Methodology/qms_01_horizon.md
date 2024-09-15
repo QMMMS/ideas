@@ -1,8 +1,10 @@
-# 初始化科研课题
+# 建立领域视野
 
 ## 课程目的
 
 ![](./img/proce.png)
+
+![](./img/timeline.png)
 
 课程可以帮助阐明Research project的步骤和过程，解释规则，分享经验。
 
@@ -14,7 +16,7 @@
 
 ## 建立领域视野
 
-领域的视野包括对“技术演变”的视野，和对“重要问题”的视野，当进入一个新的科研方向，开始读论文时，请问自己如下问题，这是后续课题选择等环节的基础：
+领域的视野包括对“技术演变”的视野，和对“重要问题”的视野。初学者往往只需建⽴较为视野narrow的视野，当一个人越来越强，看的论文越来越多，视野也越来越大。当进入一个新的科研方向，开始读论文时，请问自己如下问题，这是后续课题选择等环节的基础
 
 - 有哪些milestone papers？ 
 - 领域技术如何随着时间的推移而演变?
@@ -37,7 +39,7 @@
 3. 整理技术的演变轨迹，跟踪和预测**新技术**
 4. 整理领域热点问题的演变，跟踪和预测**新问题**
 
-关于识别Milestone papers，技巧是查找该领域被引用次数最多的论文，并按日期对它们进行排序，或者寻求经验丰富的研究人员的建议。
+关于识别Milestone papers，技巧是查找该领域被引用次数最多的论文，并按日期对它们进行排序，或者寻求经验丰富的研究人员的建议，以及观看知名研究人员的演讲。
 
 > 例如，多视角重建的milestone papers：
 >
@@ -63,30 +65,10 @@
 
 可以借助论文解析树，将阅读论文的过程转变为回答问题的过程，当然，这也是之后论文写作的好方式
 
-```mermaid
-graph LR;
-    Abstract --> Task;
-    Abstract --> Technical_Challenge;
-    Abstract --> Technical_Contribution;
-    Technical_Challenge --> Insight_Motivation;
-    Technical_Challenge --> Technical_Contribution_1;
-    Technical_Challenge --> Technical_Contribution_2;
-    Insight_Motivation --> Insight_Intro;
-    Insight_Motivation --> Insight_Advantage;
-    Technical_Contribution_1 --> TC1_Intro;
-    Technical_Contribution_1 --> TC1_Advantage;
-    Technical_Contribution_2 --> TC2_Intro;
-    Technical_Contribution_2 --> TC2_Advantage;
-    Abstract --> Experiment;
+![](./img/abstree.png)
 
-    style Abstract fill:#f9f,stroke:#333,stroke-width:4px;
-    style Task fill:#ff9,stroke:#333,stroke-width:2px;
-    style Technical_Challenge fill:#ccf,stroke:#333,stroke-width:2px;
-    style Insight_Motivation fill:#cfc,stroke:#333,stroke-width:2px;
-    style Technical_Contribution_1 fill:#fdd,stroke:#333,stroke-width:2px;
-    style Technical_Contribution_2 fill:#fdd,stroke:#333,stroke-width:2px;
-    style Experiment fill:#ffccff,stroke:#333,stroke-width:2px;
-```
+![](./img/introtree.png)
 
+![](./img/metree.png)
 
-
+另外一种方法是，给自己设立小的的算法改进任务，带着问题去阅读论文和代码
