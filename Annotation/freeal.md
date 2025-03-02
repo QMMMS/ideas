@@ -79,7 +79,7 @@ $$
 
 对样本 $$x_i$$，通过回译（Back-Translation）生成增强版本 $$x_{i}^{\text{aug}}$$，计算交叉熵损失和 KL 散度，以及 $$\mathcal{D}_{l}$$ 上的交叉熵损失 $$L_{\text{clean} }$$
 $$
-\begin{aligned} & L_{\text{cr}}^{l}=\frac{1}{\left|\mathcal{D}_{l}\right|} \sum_{x_{i} \in \mathcal{D}_{l}} l_{ce}\left(x_{i}^{\text{aug}}, \tilde{y}_{i}\right), \\ & L_{\text{cr}}^{u}=\frac{1}{\left|\mathcal{D}_{u}\right|} \sum_{x_{i} \in \mathcal{D}_{u}} l_{kl}\left(S\left(x_{i}^{\text{aug}}\right), S\left(x_{i}\right)\right) \\
+\begin{aligned} & L_{\text{cr}}^{l}=\frac{1}{\left|\mathcal{D}_{l}\right|} \sum_{x_{i} \in \mathcal{D}_{l}} l_{ce}\left(x_{i}^{\text{aug}}, \tilde{y}_{i}\right), \\ & L_{\text{cr}}^{u}=\frac{1}{\left|\mathcal{D}_{u}\right|} \sum_{x_{i} \in \mathcal{D}_{u}} l_{kl}\left(\mathcal{S}\left(x_{i}^{\text{aug}}\right), \mathcal{S}\left(x_{i}\right)\right) \\
 &L_{\text{total}}=L_{\text{clean} }+\alpha\left(L_{\text{cr} }^{l}+L_{\text{cr} }^{u}\right)
 
 \end{aligned}
