@@ -37,15 +37,15 @@ HuggingGPT采用了一种提示设计，该设计包括基于规范的指令和�
 
 ```
 [{
-	"task": task, 
-	"id", task_id, 
-	"dep": dependency_task_ids, 
-	"args": {
-		"text": text, 
-		"image": URL, 
-		"audio": URL, 
-		"video": URL
-	}
+    "task": task, 
+    "id", task_id, 
+    "dep": dependency_task_ids, 
+    "args": {
+        "text": text, 
+        "image": URL, 
+        "audio": URL, 
+        "video": URL
+    }
 }]
 ```
 
