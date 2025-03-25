@@ -131,7 +131,7 @@ You are a helpful assistant for the task of text classification on the MR (Movie
 
 ## 实验
 
-在多数任务上，采用 GPT-3.5-Turbo 作为 LLM，RoBERTa-Base 作为 SLM， ICL 过程提供 10 个上下文示例作为演示，这是由于 GPT-3.5-Turbo 的最大上下文长度为 4096。
+在多数任务上，采用 GPT-3.5-Turbo 作为 LLM，RoBERTa-Base 作为 SLM， ICL 过程提供 10 个上下文示例作为演示（除了在MA数据集上采用5个示例外），这是由于 GPT-3.5-Turbo 的最大上下文长度为 4096。
 
 - FreeAL 显著提高了 LLM 和 SLM 的无监督性能
 - 利用LLM进行标注是完全可行的，小模型可以协同进行过滤、精炼大模型的标签
@@ -159,4 +159,3 @@ You are a helpful assistant for the task of text classification on the MR (Movie
 这种补救措施能够取得具有竞争力的结果，接近原始的 FreeAL，且每一轮仅需以前成本的 10%
 
 > 在 SLM 上随机采样待标注子集的过程可以通过其他先进的查询策略（例如基于不确定性的策略）进一步改进，这是传统主动学习中的一个经典主题
-
