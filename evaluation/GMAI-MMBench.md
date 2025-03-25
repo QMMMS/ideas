@@ -117,8 +117,6 @@ MedMNIST 涵盖生物医学图像中的主要数据模态，旨在对具有各�
 
 ## CheXpert
 
-https://aimistanforddatasets01.blob.core.windows.net/chexpertchestxrays-u20210408?sv=2019-02-02&sr=c&sig=7sxFkFdQC1YrNb1k%2B5RMyLdId2hn7FhVmzn%2FihyJLq0%3D&st=2025-03-25T11%3A36%3A03Z&se=2025-04-24T11%3A41%3A03Z&sp=rl
-
 包含224,316张患者胸部X光片的大型数据集，涉及65,240名患者。
 
 任务是预测多视图胸部X光片的14种不同观察结果的概率
