@@ -30,6 +30,8 @@
 
 - 标签是由CheXpert、NegBio贴标机生成的（基于医生报告找规律的偏规则的贴标机），并且只基于文本
 
+- 大模型需要有一定的零样本、少样本准确率，pipeline才跑得起来
+
 - 整理数据集需要一些时间
 
 ------
@@ -143,6 +145,20 @@ MMedC 是一个由上海交通大学人工智能学院智慧医疗团队于 2024
 
 ![](./img/medmd2.png)
 
+- [BiomedGPT](https://mp.weixin.qq.com/s?__biz=MzU4Mzc3NTEyNA==&mid=2247485659&idx=1&sn=92525e1b95701ec3618412bfacaf1aff&chksm=fcdd0ccd6522d8c24de00bbcbc6df9cfd6410c7bb534d3ae58febb0e86ebd160282466b71ee3#rd)：在**模型微调阶段**，BioBiomedGPT依据临床应用的前景选择下游生物医学任务，包括**视觉问答、图像描述、医学图像分类、文本摘要**以及**文本理解**五类。其中：
+  
+  - 视觉问答微调使用的数据集包括VQA-RAD、SLAKE以及PathVQA；
+  
+  - 图像描述微调使用的数据集包括IU X-ray、MIMIC-CXR以及Peir Gross；
+  
+  - 医学图像分类微调使用MedMNIST-Raw、MC-CXR、SZ-CXR以及CBIS-DDSM，其中MedMNIST-Raw收集自多个来源，涵盖九种组织类型、七种模态；
+  
+  - 文本摘要微调使用MedQSum、HealthCareMagic、MIMIC-CXR、MIMIC-III；
+  
+  - 文本理解微调使用MedNLI、MIMIC-III、SEER、TREC2022。
+  
+  - 在指令调优阶段BioBiomedGPT结合LLaVA-Med使用的方法，基于VQA-RAD、SLAKE和PubMed articles进行模型优化
+
 ## 其他非医疗数据集
 
 [Multimodal-datasets](https://github.com/drmuskangarg/Multimodal-datasets)
@@ -151,8 +167,6 @@ MMedC 是一个由上海交通大学人工智能学院智慧医疗团队于 2024
 
 - [The Caltech-UCSD Birds-200-2011 Dataset](https://authors.library.caltech.edu/records/cvm3y-5hh21)：11,788张200种鸟类的图片，每张图片都用边界框、部位位置、属性标签。[CUB-200-2011 | Kaggle](https://www.kaggle.com/datasets/wenewone/cub2002011)，[alkzar90/CC6204-Hackaton-Cub-Dataset · Datasets at Hugging Face](https://huggingface.co/datasets/alkzar90/CC6204-Hackaton-Cub-Dataset)
 
-- 
-
 ```
 {'image': <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=334x500 at 0x7F59DE348AF0>,
  'description': 'this bird has a short orange bill, white breast and body and white eyes.\na medium sized bird with a orange bill and a black crown and white eyes\nthis white-breasted bird has a short, squat, orange bill, a black head and wings, and small white eyes above a white stripe.\nthis bird has a white breast, a black head, a short red beak, and webbed feet.\nthis bird is white with black on its neck and has a long, pointy beak.\nthis bird has wings that are black and has a white belly\nthis bird has wings that are black and has a long bill\nthis is a medium sized bird, with a white belly, and a grey head and wings, with a short yellow bill.\nthis bird is white and gray in color, and has a bright orange beak.\nthis bird has a blunt orange beak with mostly black above the neck, the belly is solid white.\n',
@@ -160,4 +174,8 @@ MMedC 是一个由上海交通大学人工智能学院智慧医疗团队于 2024
  'file_name': 'Parakeet_Auklet_0048_795980.jpg'}
 ```
 
-其他感觉不太适合的多模态任务：Machine Translation、Information Retrieval、Question Answering、Summarization、Image Captions
+- Muse-CaR：文本、汽车评论节目视频、多种标签（情感、主题、出现的物体）
+
+------
+
+其他感觉不太适合的多模态任务：Machine Translation、Information Retrieval、Question Answering、Summarization、Image Captions、以及用于多模态大模型预训练的纯文本/图片交错的无标签语料库
