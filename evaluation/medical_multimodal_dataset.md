@@ -161,21 +161,30 @@ MMedC 是一个由上海交通大学人工智能学院智慧医疗团队于 2024
 
 ## 其他非医疗数据集
 
-[Multimodal-datasets](https://github.com/drmuskangarg/Multimodal-datasets)
+[Multimodal-datasets](https://github.com/drmuskangarg/Multimodal-datasets)、https://zhuanlan.zhihu.com/p/189876288
 
 - [MELD](https://github.com/declare-lab/MELD)：文本、美剧视频（音频）、情绪识别标签
 
 - [The Caltech-UCSD Birds-200-2011 Dataset](https://authors.library.caltech.edu/records/cvm3y-5hh21)：11,788张200种鸟类的图片，每张图片都用边界框、部位位置、属性标签。[CUB-200-2011 | Kaggle](https://www.kaggle.com/datasets/wenewone/cub2002011)，[alkzar90/CC6204-Hackaton-Cub-Dataset · Datasets at Hugging Face](https://huggingface.co/datasets/alkzar90/CC6204-Hackaton-Cub-Dataset)
 
-```
-{'image': <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=334x500 at 0x7F59DE348AF0>,
- 'description': 'this bird has a short orange bill, white breast and body and white eyes.\na medium sized bird with a orange bill and a black crown and white eyes\nthis white-breasted bird has a short, squat, orange bill, a black head and wings, and small white eyes above a white stripe.\nthis bird has a white breast, a black head, a short red beak, and webbed feet.\nthis bird is white with black on its neck and has a long, pointy beak.\nthis bird has wings that are black and has a white belly\nthis bird has wings that are black and has a long bill\nthis is a medium sized bird, with a white belly, and a grey head and wings, with a short yellow bill.\nthis bird is white and gray in color, and has a bright orange beak.\nthis bird has a blunt orange beak with mostly black above the neck, the belly is solid white.\n',
- 'label': 6,
- 'file_name': 'Parakeet_Auklet_0048_795980.jpg'}
+Copy
+
+```Plain
+{'image': <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=334x500 at 0x7F59DE348AF0>, 'description': 'this bird has a short orange bill, white breast and body and white eyes.\na medium sized bird with a orange bill and a black crown and white eyes\nthis white-breasted bird has a short, squat, orange bill, a black head and wings, and small white eyes above a white stripe.\nthis bird has a white breast, a black head, a short red beak, and webbed feet.\nthis bird is white with black on its neck and has a long, pointy beak.\nthis bird has wings that are black and has a white belly\nthis bird has wings that are black and has a long bill\nthis is a medium sized bird, with a white belly, and a grey head and wings, with a short yellow bill.\nthis bird is white and gray in color, and has a bright orange beak.\nthis bird has a blunt orange beak with mostly black above the neck, the belly is solid white.\n', 'label': 6, 'file_name': 'Parakeet_Auklet_0048_795980.jpg'}
 ```
 
 - Muse-CaR：文本、汽车评论节目视频、多种标签（情感、主题、出现的物体）
 
+- 《Multi-Modal Sarcasm Detection in Twitter with Hierarchical Fusion Model》：图片、描述（文本模态），另一个是图像的属性，即图像包含那些东西，用文字描述（也可以归类为属性模态），用于讽刺识别
+
+- 《Towards Multimodal Sarcasm Detection(An Obviously Perfect Paper)》--【多模态讽刺识别】
+
+- 《CH-SIMS: A Chinese Multimodal Sentiment Analysis Dataset with Fine-grained Annotations of Modality》--【中文多模态情绪】2020年。论文中给出常规的文本、图片和语音的数据进行多模态情绪分类，其中标签更加细致，不仅有最终的标签，还有各个模态的标签
+
+- Question Answering
+
+- 多模态 ner
+
 ------
 
-其他感觉不太适合的多模态任务：Machine Translation、Information Retrieval、Question Answering、Summarization、Image Captions、以及用于多模态大模型预训练的纯文本/图片交错的无标签语料库
+其他多模态任务：Machine Translation、Information Retrieval、Summarization、Image Captions、以及用于多模态大模型预训练的纯文本/图片交错的无标签语料库、多模态生成、多模态检索、Flickr30K Entities图像-边界框-描述
