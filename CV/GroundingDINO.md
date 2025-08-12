@@ -1,5 +1,7 @@
 # Grounding DINO
 
+> META 也有叫 DINO 的系列工作，需要区分，这篇工作的前置工作应该是《DINO: DETR with Improved DeNoising Anchor Boxes for End-to-End Object Detection》
+
 既CLIP打破文字和图像之间的壁垒、DINO提高了目标检测精度的上限之后，Grounding DINO可以根据文字描述检测指定目标。例如你告诉它：“检测左边的狮子！”，它就会只把左边的狮子框选出来
 
 ![](./img/gdino6.png)
