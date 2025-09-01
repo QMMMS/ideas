@@ -83,7 +83,9 @@ $$
 $$
 \hat{p}=f^{-1}\left(e_{\arg\min_{i}\{e_{i}\mid e_{i}\in E\}}\right)
 $$
-![](./img/scot7.png)在测试阶段，我们将最优提示 $$\hat{p}$$ 与问题连接起来，并将组合文本输入到大型语言模型中。按照自洽性CoT方法（Wang等人，2022年)，我们执行N轮采样以生成多样化的推理过程 R，然后将得到的串联文本输入到大型语言模型中以生成预测 A，相当于对于每个问题，我们得到了多个结果：
+![](./img/scot7.png)
+
+在测试阶段，我们将最优提示 $$\hat{p}$$ 与问题连接起来，并将组合文本输入到大型语言模型中。按照自洽性CoT方法（Wang等人，2022年)，我们执行N轮采样以生成多样化的推理过程 R，然后将得到的串联文本输入到大型语言模型中以生成预测 A，相当于对于每个问题，我们得到了多个结果：
 $$
 R_{i}^{\prime}=\left\{\operatorname{LLM}(\operatorname{Concat}\left(q_{i},\hat{p}\right))_{j}\mid j=1,2,\ldots, N\right\}\\
 A_{i}'=\left\{\operatorname{LLM}(\operatorname{Concat}(q_{i},\hat{p},r_{i,j}^{\prime}))\mid j=1,\ldots,N\right\}
